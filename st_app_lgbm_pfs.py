@@ -109,7 +109,8 @@ def do_predict():
     # 进行预测并输出
     pr = gbm.predict(pocd_predict)
     pr = pr.astype(np.int)
-    st.text(f"Predict result {COL_Y[0]} is {pr[0]}")
+    st.markdown(r"$\color{red}{Predict}$ $\color{red}{result}$ $\color{red}{" + str(COL_Y[0]) + r"}$ $\color{red}{is}$ $\color{red}{" + str(pr[0]) + "}$")
+    # st.text(f"Predict result {COL_Y[0]} is {pr[0]}")
 
 
 if __name__ == "__main__":
